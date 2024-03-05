@@ -1,0 +1,166 @@
+{
+    "core": [
+        {
+            "id": "1",
+            "feature": "Consolidated Lead Conversion Platform"
+        },
+        {
+            "id": "2",
+            "feature": "Review Management with AI Responses"
+        },
+        {
+            "id": "3",
+            "feature": "Basic Automations"
+        },
+        {
+            "id": "4",
+            "feature": "Basic Reporting"
+        },
+        {
+            "id": "5",
+            "feature": "Basic Customization Options"
+        },
+        {
+            "id": "6",
+            "feature": "Podium Mobile App"
+        },
+        {
+            "id": "7",
+            "feature": "200+ Integration with Integration Support"
+        },
+        {
+            "id": "8",
+            "feature": "Phone Systems Add-on Available"
+        },
+        {
+            "id": "9",
+            "feature": "Dedicated Customer Success Manager"
+        },
+        {
+            "id": "10",
+            "feature": "Chat, Phone, Email Support"
+        },
+        {
+            "id": "11",
+            "feature": "1-on-1 Personalized Onboarding"
+        }
+    ],
+    "pro": [
+        {
+            "id": "1",
+            "feature": "AI Instant Answers"
+        },
+        {
+            "id": "2",
+            "feature": "AI Phone Call Summaries"
+        },
+        {
+            "id": "3",
+            "feature": "Automatic Lead Routing"
+        },
+        {
+            "id": "4",
+            "feature": "Advanced Automations"
+        },
+        {
+            "id": "5",
+            "feature": "Lead Capture Forms"
+        },
+        {
+            "id": "6",
+            "feature": "Hosted Surveys"
+        },
+        {
+            "id": "7",
+            "feature": "Text-Based Surveys"
+        },
+        {
+            "id": "8",
+            "feature": "Text Marketing with Images and GIFs"
+        },
+        {
+            "id": "9",
+            "feature": "Advanced Customer Segmentation"
+        },
+        {
+            "id": "10",
+            "feature": "High-Volume Carrier-Verified Messaging"
+        },
+        {
+            "id": "11",
+            "feature": "Lower Payment Processing Fees"
+        }
+    ],
+    "custom": [
+        {
+            "id": "1",
+            "feature": "dvanced Multi-Location Management"
+        },
+        {
+            "id": "2",
+            "feature": "Advanced Reporting Add-on Available"
+        },
+        {
+            "id": "3",
+            "feature": "Advanced Branding and Customization"
+        },
+        {
+            "id": "4",
+            "feature": "Discount on Phones Plan"
+        },
+        {
+            "id": "5",
+            "feature": "Discount on Desk Phones"
+        },
+        {
+            "id": "6",
+            "feature": "Discount on Point of Sale Hardware"
+        },
+        {
+            "id": "7",
+            "feature": "Discount on High Volume Bulk Messages"
+        },
+        {
+            "id": "8",
+            "feature": "Comprehensive Account Migration"
+        },
+        {
+            "id": "9",
+            "feature": "Quarterly Business Reviews"
+        },
+        {
+            "id": "10",
+            "feature": "Personalized Account Plans"
+        },
+        {
+            "id": "11",
+            "feature": "Priority Phone Plan Support"
+        },
+        {
+            "id": "12",
+            "feature": "Proactive Fraud Alert System"
+        },
+        {
+            "id": "13",
+            "feature": "Lower Payment Processing FeesCustom Billing Available"
+        },
+        {
+            "id": "14",
+            "feature": "Custom Processing Rates (Pending eligibility)"
+        }
+    ],
+    "links": [
+        {
+            "id": "1",
+            "link":"./PaymentForm.jsx"
+        },
+        {
+            "id": "2",
+            "link":"./PaymentForm.jsx"
+        },
+        {
+            "id": "3",
+            "link":"./PaymentForm.jsx"
+        }
+    ]
+}

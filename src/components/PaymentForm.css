@@ -1,0 +1,170 @@
+.visibleForm {
+    display: flex;
+}
+
+.hiddenForm {
+    display: none;
+}
+
+:root {
+    background: rgb(37, 34, 34)
+}
+
+.main-container {
+    /* width: 100%;
+    position: relative; */
+    /* background-color: #d60d0d; */
+    /* border: 1px solid; */
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 70%;
+        /* max-width: 90%; */
+        padding: 20px;
+        border-radius: 20px;
+        position: absolute;
+        left: 15%;
+        top: 10ch;
+        background-color: #1a1a1a;
+        color: #fff;
+        box-shadow: 0 0px 10px 1px rgba(158, 149, 149, 0.1), 0 5px 15px -2px rgb(199, 184, 184);
+        /* box-shadow: 10px 10px 10px 1px #b3a8a8; */
+        /* border: 1px solid #d10101; */
+        /* padding: 40px 70px; */
+        /* margin:  50px; */
+    }
+
+    .titlee {
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: -1px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        color: #00bfff;
+        gap: 10px;
+    }
+
+    .titlee::before {
+        width: 18px;
+        height: 18px;
+    }
+
+    .titlee::after {
+        width: 18px;
+        height: 18px;
+        animation: pulse 1.5s linear infinite;
+    }
+
+    .titlee::before,
+    .titlee::after {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        left: 0px;
+        background-color: #00bfff;
+    }
+
+    .message {
+        font-size: 14.5px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 40px;
+    }
+
+
+    .flex {
+        display: flex;
+        width: 100%;
+        gap: 6px;
+        margin-block: -18px !important;
+    }
+
+    .address {
+        width: 310%;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+
+    }
+
+    .form label {
+        position: relative;
+    }
+
+    .form label .input {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        padding: 20px 05px 05px 10px;
+        outline: 0;
+        border: 1px solid rgba(105, 105, 105, 0.397);
+        border-radius: 10px;
+    }
+
+    .card-number {
+        width: 205%;
+    }
+
+    .form label .input+span {
+        color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        left: 12px;
+        top: 0px;
+        font-size: 0.9em;
+        cursor: text;
+        transition: top 0.3s ease, font-size 0.3s ease;
+    }
+
+    .form label .input:placeholder-shown+span {
+        top: 12.5px;
+        font-size: 0.9em;
+    }
+
+    .form label .input:focus+span {
+        color: #00bfff;
+        top: 0px;
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+
+    .input::placeholder {
+        font-size: x-large;
+        margin-top: 5px;
+    }
+
+    .submit {
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 16px;
+        transform: .3s ease;
+        background-color: #00bfff;
+    }
+
+    .submit:hover {
+        background-color: #00bfff96;
+    }
+
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}

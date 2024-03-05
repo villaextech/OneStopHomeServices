@@ -1,0 +1,168 @@
+.pack-container {
+  position: relative;
+  display: flex;
+  max-width: 380px;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #ffffff;
+  /* background:transparent; */
+  box-shadow: 0 0px 10px 1px rgb(0 0 0 / 0.1), 0 5px 15px -2px rgb(0 0 0 / 0.1);
+  padding: 1.5rem 2.5rem;
+  color: #000000;
+  /* border: 1px solid rgb(22, 102, 223); */
+  margin-right: 10px;
+  margin: 10px;
+  
+  &:hover {
+    /* border: 1px solid rgb(240, 204, 0); */
+    cursor: pointer;
+    transition: 0.1s  ease-in-out;
+    /* box-shadow: 0 0px 0px 3px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
+    /* -moz-transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -o-transition: 0.2s ease-in-out; */
+    transform: scale(1.02);
+    /* box-shadow: none; */
+    /* box-shadow: 0 0px 0px 0px rgb(0 0 0 / 0.1), 0 0px 0px -2px rgb(0 0 0 / 0.1); */
+    /* border: 1px solid rgb(22, 102, 223); */
+    /* box-shadow: 5px 5px 30px rgba(37, 37, 37, 0.1);
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175); */
+    /* --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075); */
+
+  }
+}
+
+.pack-container .header {
+  position: relative;
+  margin: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 0;
+  border-bottom: 1px solid #000000;
+  background: transparent;
+  padding-bottom: 1rem;
+  text-align: center;
+  /* text-wrap: nowrap; */
+}
+
+.pack-container .header .title {
+  /* display: block; */
+  font-family: sans-serif;
+  font-size: 1.7rem;
+  line-height: 4rem;
+  text-transform: capitalize;
+  color: #000000;
+  text-align: left;
+  /* background-color: #494949; */
+}
+
+svg {
+  color: #1e47f6;
+}
+
+.price-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 9px;
+  font-family: ui-rounded;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.price-container span:first-child {
+  margin-top: 10px;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.price-container span:last-child {
+  align-self: flex-end;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.custom-pricing {
+  font-size: 35px;
+  text-wrap: nowrap;
+  line-height: 45px;
+}
+
+.per-month {
+  font-size: 14px !important;
+  width: 1px;
+  letter-spacing: normal !important;
+  line-height: 1rem !important;
+}
+
+.custom-plan {
+  font-size: 14px;
+  /* width: 1px; */
+  letter-spacing: normal;
+  line-height: 1rem;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 0%;
+  max-height: 80vh;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.list {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.list span {
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background-color: rgba(255, 255, 255, 0.185);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list span svg {
+  height: 12px;
+  width: 12px;
+}
+
+.list p {
+  display: block;
+  font-family: sans-serif;
+}
+
+.button-container {
+  margin-top: 20px;
+  padding: 0;
+  /* border: 1px solid black; */
+}
+
+.button-container button {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #000;
+  outline: 0;
+  border: 0;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #000;
+    color: #ffffff;
+  }
+}
