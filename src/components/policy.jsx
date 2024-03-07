@@ -10,7 +10,7 @@ const Policy = () => {
             <div className='policy-main'>
                 <div className="policy-container">
                     <h1>Terms & Conditions</h1>
-                    <span>Effective Date: ………, 2023   </span>
+                    <span>Effective Date: 7 March 2023   </span>
                     <br />
                     <i>Please read these Terms and Conditions carefully before using our website <a className='link-style-none' href={<OneStopHomeService />}>One Stop Home Services</a> operated by One Stop Home Services.</i>
                     <h3 className='mt-lg-4'>Use of the website</h3>
