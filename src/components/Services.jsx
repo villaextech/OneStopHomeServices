@@ -43,15 +43,15 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id='home_warranty'>
                         <div class="col-md-6 col-lg-2 d-flex align-items-stretch mt-2 mt-lg-3" data-aos="fade-up"
                             data-aos-delay="200">
                         </div>
-                        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mt-2 mt-lg-3" data-aos="fade-up"
+                        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mt-2 mt-lg-3"  data-aos="fade-up"
                             data-aos-delay="300">
                             <div class="icon-box icon-box-blue">
                                 <div class="icon"><i class='bx bx-bug-alt'></i></div>
-                                <h4 class="title"><a href="">Home Warranty </a></h4>
+                                <h4 class="title" id=''><a href="">Home Warranty </a></h4>
                                 <p class="description">
                                     Protect your appliances and systems from unexpected breakdowns! Our home warranty service covers repair and replacement costs, giving you peace of mind. Whether it's your refrigerator, air conditioner, or heating system, trust us to keep them running smoothly. With our dedicated support team just a call away, you're always covered.
                                 </p>

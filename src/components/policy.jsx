@@ -5,7 +5,7 @@ const Policy = () => {
     return (
         <>
             <Header />
-            <div className='policy-main container'>
+            <div className='policy-main'>
                 <div className="policy-container">
                     <h1>Terms & Conditions</h1>
                     <span>Effective Date: ………, 2023   </span>

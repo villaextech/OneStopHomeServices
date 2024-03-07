@@ -7,7 +7,7 @@ const Plans = () => {
         <Header/>
             <div className="container container-plans mt-4">
                 <div className="section-title" data-aos="fade-up">
-                    <h1 className='alert alert-primary container'>Plans</h1>
+                    <h1 className=' bg-transparent container'><span className='text-dark'>Plans</span></h1>
                 </div>
                 <div className="row">
                     <div className="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
@@ -15,7 +15,7 @@ const Plans = () => {
                             <PlansDetail
                                 title={"Utility Services"}
                                 buy="Buy Now"
-                                price={"188.9"}
+                                price={"289.99"}
                                 feature='Utility Services'
                             />
                         </div>
@@ -25,7 +25,7 @@ const Plans = () => {
                             <PlansDetail
                                 title={"Home Security"}
                                 buy="Buy Now"
-                                price={"188.9"}
+                                price={"399.99"}
                                 feature='Home Security'
                             />
                         </div>
@@ -35,7 +35,7 @@ const Plans = () => {
                             <PlansDetail
                                 title={"Telecom Services"}
                                 buy="Buy Now"
-                                price={"188.9"}
+                                price={"399.99"}
                                 feature='Telecom Services'
                             />
                         </div>
@@ -48,7 +48,7 @@ const Plans = () => {
                             <PlansDetail
                                 title={"Home Warranty"}
                                 buy="Buy Now"
-                                price={"188.9"}
+                                price={"299.99"}
                                 feature='Home Warranty'
                             />
                         </div>
@@ -58,7 +58,7 @@ const Plans = () => {
                             <PlansDetail
                                 title={"Home Automation"}
                                 buy="Buy Now"
-                                price={"188.9"}
+                                price={"510.99"}
                                 feature='Home Automation'
                             />
                         </div>
@@ -68,8 +68,8 @@ const Plans = () => {
                             <PlansDetail
                                 title={"Custom"}
                                 buy="Conatct Us"
-                                feature='Chose according to your Own requirments'
-                                note='Talk with our experts for custom plan.'
+                                feature='Contact us for custom plan.'
+                                note='Talk with us for custom plan.'
                             />
                         </div>
                     </div>

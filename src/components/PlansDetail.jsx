@@ -8,11 +8,11 @@ const PlansDetail = ({ title, buy, price, feature, note }) => {
                     {title}
                 </p>
                 <div className="price-container">
-                    <span hidden={title === 'Custom'}>$</span>
+                    <span className='pricee' hidden={title === 'Custom'}>$</span>
                     <span className="custom-pricing" hidden={price !== 'Custom Pricing'}>{price}</span>
-                    <span hidden={title === 'Custom'}>{price}</span>
+                    <span className='pricee' hidden={title === 'Custom'}>{price}</span>
                     <span className='custom-plan'>{note}</span>
-                    <span className="per-month" hidden={title === 'Custom'}>per month</span>
+                    <span className="per-month" hidden={title === 'Custom'}>one time</span>
                 </div>
             </div>
             <div>

@@ -173,7 +173,7 @@ h6 {
   height: 2px;
   bottom: 3px;
   left: 0;
-  background-color: #1bac91;
+  background-color:rgb(216, 187, 24);
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -466,6 +466,7 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background: linear-gradient(30deg, rgb(243, 195, 61) 5%,rgb(218, 135, 79)50%,rgb(190, 81, 38) 40%, transparent);
 }
 
 .section-bg {
@@ -584,7 +585,7 @@ section {
 
 .about .icon-box p {
   font-size: 15px;
-  color: #848484;
+  color: #000000;
   margin-left: 60px;
 }
 
@@ -1538,7 +1539,7 @@ section {
 .newtons-cradle {
   --uib-size: 50px;
   --uib-speed: 1.2s;
-  --uib-color: #474554;
+  --uib-color: #ffffff;
   position: relative;
   left: 50%;
   top: 40cqh;

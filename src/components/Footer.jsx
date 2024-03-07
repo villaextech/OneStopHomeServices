@@ -66,11 +66,11 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#services">Home Warranty</a>
+                                    <a href="#home_warranty">Home Warranty</a>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#services">Home Automation</a>
+                                    <a href="#home_warranty">Home Automation</a>
                                 </li>
                             </ul>
                         </div>
