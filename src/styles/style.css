@@ -103,10 +103,16 @@ svg {
 
 .custom-plan {
   font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
   /* width: 1px; */
   letter-spacing: normal;
   line-height: 1rem;
   text-wrap: nowrap;
+  overflow-wrap:break-word;
+  color: #e2d408;
+  position: relative;
+  left: 70px;
 }
 .pricee{
   font-weight:bolder;

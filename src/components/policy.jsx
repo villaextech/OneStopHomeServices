@@ -1,16 +1,18 @@
 import React from 'react'
 import '../styles/policy.css'
 import Header from './Header'
+import OneStopHomeService from '../pages/OneStop'
+import Footer from './Footer'
 const Policy = () => {
     return (
-        <>
+        <div>
             <Header />
             <div className='policy-main'>
                 <div className="policy-container">
                     <h1>Terms & Conditions</h1>
                     <span>Effective Date: ………, 2023   </span>
                     <br />
-                    <i>Please read these Terms and Conditions carefully before using our website (website link) operated by One Stop Home Services.</i>
+                    <i>Please read these Terms and Conditions carefully before using our website <a className='link-style-none' href={<OneStopHomeService />}>One Stop Home Services</a> operated by One Stop Home Services.</i>
                     <h3 className='mt-lg-4'>Use of the website</h3>
                     <div className='contentt'>
                         <h4 className='mt-lg-5'>Eligibility</h4>
@@ -51,7 +53,7 @@ const Policy = () => {
                     <h1>Privacy Policy</h1>
                     <span>Effective Date: ………, 2023   </span>
                     <br />
-                    <i>At One Stop Home Services, located in the United States, we prioritize the privacy and security of our website visitors and users. This Privacy Policy outlines the types of information we collect, how we use and protect it, and the choices you have regarding your personal information. By accessing or using our website…………………….. , you agree to the terms of this Privacy Policy</i>
+                    <i>At One Stop Home Services, located in the United States, we prioritize the privacy and security of our website visitors and users. This Privacy Policy outlines the types of information we collect, how we use and protect it, and the choices you have regarding your personal information. <br /> By accessing or using our  <a className='link-style-none' href={<OneStopHomeService />}>One Stop Home Services</a> , you agree to the terms of this Privacy Policy</i>
 
                     <div className='contentt'>
                         <h2 className='mt-lg-4'>Information We Collect </h2>
@@ -143,7 +145,8 @@ const Policy = () => {
                     </div>
                 </div>
             </div>
-        </>
+            <Footer/>
+        </div>
     )
 }
 

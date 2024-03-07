@@ -3,14 +3,12 @@ import "../styles/toggle.css";
 import PricingCard from "./PricingCard";
 import data from '../components/data.json'
 import PaymenthtmlForm from "./PaymentForm";
-// import { CounterContext } from "./CounterContext";
 const Toggle = () => {
     const [selectMonthly, setSelectMonthly] = useState(true);
     return (
         <div>
             <div className="PricingApp">
                 <div className="app-container">
-                    {/* Header */}
                     <input id="switch" type="checkbox" onChange={() => { setSelectMonthly(!selectMonthly); }} />
                     <div class="app">
                         <div class="content">
@@ -23,7 +21,6 @@ const Toggle = () => {
                             </label>
                         </div>
                     </div>
-                    {/* Cards here */}
                     {data.links.map((item, index) => {
                     })}
                     <div className="pricing-cards">

@@ -4,10 +4,10 @@ const Services = () => {
     return (
         <div className='services-main'>
             <Header />
-            <section id="services" class="services section-bg mt-3">
+            <section id="services" class="services section-bg">
                 <div class="container">
                     <div class="section-title" data-aos="fade-up">
-                        <h2>Services</h2>
+                        <h2 className='mt-3'>Services</h2>
                         <p>Find simple answers to all of your home's problems. Our services are made with contemporary homes in mind, simplifying and enhancing daily living.</p>
                     </div>
                     <div class="row">
@@ -47,7 +47,7 @@ const Services = () => {
                         <div class="col-md-6 col-lg-2 d-flex align-items-stretch mt-2 mt-lg-3" data-aos="fade-up"
                             data-aos-delay="200">
                         </div>
-                        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mt-2 mt-lg-3"  data-aos="fade-up"
+                        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mt-2 mt-lg-3" data-aos="fade-up"
                             data-aos-delay="300">
                             <div class="icon-box icon-box-blue">
                                 <div class="icon"><i class='bx bx-bug-alt'></i></div>

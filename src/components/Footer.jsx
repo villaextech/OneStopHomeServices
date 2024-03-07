@@ -1,6 +1,7 @@
 import React from 'react'
 import Services from './Services'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import OneStopHomeService from '../pages/OneStop'
 
 const Footer = () => {
     return (
@@ -8,9 +9,9 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-4 col-md-6">
                             <div className="footer-info">
-                                <h3>One stop services</h3>
+                                <h3>One Stop Home services</h3>
                                 <p>
                                     ONE STOP HOME SERVICES,
                                     <br />
@@ -24,66 +25,55 @@ const Footer = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6 footer-links">
+                        <div className="col-lg-4 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#hero">Home</a>
+                                    <Link to='/' href="#hero">Home</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#about">About us</a>
+                                    <Link to='/about' href="#about">About us</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#services">Services</a>
+                                    <Link to='/services' href="#services">Services</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href='#services'> Terms of service</a>
+                                    <Link to='/policy' href='#services'> Terms of service</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#services">Privacy policy</a>
+                                    <Link to='/policy' href="#services">Privacy policy</Link>
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-6 footer-links">
+                        <div className="col-lg-4 col-md-6 footer-links">
                             <h4>Our Services</h4>
                             <ul>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#services">Utilitiy Services</a>
+                                    <NavLink to='/services' href="#services">Utilitiy Services</NavLink>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#services">Home Security</a>
+                                    <NavLink to='./services' href="#services">Home Security</NavLink>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#services">Telecom Services</a>
+                                    <NavLink to='/services' href="#services">Telecom Services</NavLink>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#home_warranty">Home Warranty</a>
+                                    <NavLink to='/services' href={<Services/>}>Home Warranty</NavLink>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <a href="#home_warranty">Home Automation</a>
+                                    <NavLink to='/services' href="#home_warranty">Home Automation</NavLink>
                                 </li>
                             </ul>
-                        </div>
-                        <div className="col-lg-4 col-md-6 footer-newsletter">
-                            <h4>Our Newsletter</h4>
-                            <p>
-                                Tamen quem nulla quae legam multos aute sint culpa legam noster
-                                magna
-                            </p>
-                            <form action="" method="post">
-                                <input type="email" name="email" placeholder='Email' />
-                                <input type="submit" defaultValue="Subscribe" />
-                            </form>
                         </div>
                     </div>
                 </div>
