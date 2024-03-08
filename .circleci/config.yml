@@ -45,6 +45,3 @@ workflows:
       - push-to-ecr:
           requires:
             - build
-
-context:
-  - staging
