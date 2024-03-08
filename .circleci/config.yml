@@ -1,8 +1,6 @@
 version: 2.1
-
 orbs:
   aws-cli: circleci/aws-cli@0.1.4
-
 jobs:
   build:  
     docker:
@@ -10,44 +8,46 @@ jobs:
     working_directory: ~/app
     steps:
       - checkout
+      - setup_remote_docker
       - run:
-          name: Install dependencies
-          command: npm install
+          name: install dependencies
+          command: |
+            npm install
+      - run:
+          name: Build image
+          command: |
+            docker build -t app:latest .
       - persist_to_workspace:
-          root: ~/app
+          root: .
           paths:
-            - .
-
-  push-to-ecr:
+            - docker-image
+  deploy:  
     docker:
       - image: circleci/python:3.6.1
     environment:
       AWS_DEFAULT_OUTPUT: json
     steps:
+      - checkout
+      - setup_remote_docker
       - attach_workspace:
           at: workspace
+      - aws-cli/install
+      - aws-cli/configure:
+          aws-access-key-id: "$AWS_ACCESS_KEY_ID"
+          aws-region: "$AWS_DEFAULT_REGION"
       - run:
-          name: Export Environment Variables
+          name: Load image
           command: |
-            export AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID
-            export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+            docker load --input workspace/docker-image/image.tar
       - run:
-          name: Navigate to Dockerfile Directory
-          command: cd home/circleci/app  # Adjust this if Dockerfile is in a different directory
-      - run:
-          name: Build and Push Docker image to ECR
+          name: Push image
           command: |
-            docker build -t "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/onestophomeservices:main" .
-            aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
-            docker push "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/onestophomeservices:main"
-
+            eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+            docker push app:latest
 workflows:
-  build-and-push:
+  build-deploy:
     jobs:
       - build
-      - push-to-ecr:
+      - deploy:
           requires:
             - build
-
-context:
-  - staging
