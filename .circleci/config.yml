@@ -1,6 +1,8 @@
 version: 2.1
+
 orbs:
   aws-cli: circleci/aws-cli@0.1.4
+
 jobs:
   build:  
     docker:
@@ -15,6 +17,7 @@ jobs:
           root: ~/app
           paths:
             - .
+
   push-to-ecr:
     docker:
       - image: circleci/python:3.6.1
@@ -23,6 +26,11 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
+      - run:
+          name: Export Environment Variables
+          command: |
+            export AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID
+            export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
       - run:
           name: Build and Push Docker image to ECR
           command: |
