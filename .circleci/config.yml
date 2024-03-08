@@ -19,7 +19,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - app/docker-image  # Update the path to match the actual location of the Docker image tar file
+            - docker-image/  # Corrected path to the Docker image tar file directory
   deploy:
     docker:
       - image: circleci/python:3.6.1
@@ -30,9 +30,6 @@ jobs:
       - setup_remote_docker
       - attach_workspace:
           at: workspace
-      - run:
-          name: Debug Workspace Contents
-          command: ls -al workspace    
       - aws-cli/install
       - aws-cli/configure:
           aws-access-key-id: "$AWS_ACCESS_KEY_ID"
