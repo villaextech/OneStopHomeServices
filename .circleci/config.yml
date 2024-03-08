@@ -48,7 +48,7 @@ jobs:
           command: |
             eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
             docker tag onehomeservices/app:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onehomeservices/app:latest
-            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onehomeservices/app:latest
+            docker push 532597438699.dkr.ecr.us-east-1.amazonaws.com/onestophomeservices:latest
 workflows:
   build-deploy:
     jobs:
