@@ -10,9 +10,6 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: install dependencies
-          command: npm install
-      - run:
           name: Build image
           command: |
             docker build -t onehomeservices/app:latest .
