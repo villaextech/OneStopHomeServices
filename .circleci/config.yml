@@ -32,6 +32,9 @@ jobs:
             export AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID
             export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
       - run:
+          name: Navigate to Dockerfile Directory
+          command: cd $HOME/app  # Adjust this if Dockerfile is in a different directory
+      - run:
           name: Build and Push Docker image to ECR
           command: |
             docker build -t "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/onestophomeservices:main" .
@@ -45,3 +48,6 @@ workflows:
       - push-to-ecr:
           requires:
             - build
+
+context:
+  - staging
