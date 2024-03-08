@@ -15,7 +15,12 @@ jobs:
       - run:
           name: Build image
           command: |
-            docker build -t app:latest .
+            docker build -t onehomeservices/app:latest .
+      - run:
+          name: Save image to an archive
+          command: |
+            mkdir docker-image
+            docker save -o docker-image/image.tar onehomeservices/app:latest
       - persist_to_workspace:
           root: .
           paths:
@@ -42,7 +47,8 @@ jobs:
           name: Push image
           command: |
             eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-            docker push app:latest
+            docker tag onehomeservices/app:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onehomeservices/app:latest
+            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onehomeservices/app:latest
 workflows:
   build-deploy:
     jobs:
