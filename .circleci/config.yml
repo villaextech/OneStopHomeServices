@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@0.1.4
 jobs:
-  build:  
+  build:
     docker:
       - image: circleci/node:14
     working_directory: ~/app
@@ -11,13 +11,16 @@ jobs:
       - setup_remote_docker
       - run:
           name: install dependencies
-          command: |
-            npm install
+          command: npm install
       - run:
           name: Build image
           command: |
             docker build -t app:latest .
-  deploy:  
+      - persist_to_workspace:
+          root: .
+          paths:
+            - docker-image  # Ensure this directory contains your Docker image tar file
+  deploy:
     docker:
       - image: circleci/python:3.6.1
     environment:
@@ -34,7 +37,7 @@ jobs:
       - run:
           name: Load image
           command: |
-            docker load --input workspace/docker-image/image.tar
+            docker load --input workspace/docker-image/image.tar  # Load the Docker image tar file
       - run:
           name: Push image
           command: |
