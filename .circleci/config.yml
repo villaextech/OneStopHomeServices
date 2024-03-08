@@ -11,13 +11,10 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - run:
-          name: Build website
-          command: npm run build
       - persist_to_workspace:
           root: ~/app
           paths:
-            - build
+            - .
   push-to-ecr:
     docker:
       - image: circleci/python:3.6.1
@@ -26,16 +23,11 @@ jobs:
     steps:
       - attach_workspace:
           at: workspace
-      - aws-cli/install
-      - aws-cli/configure:
-          aws-access-key-id: "$AWS_ACCESS_KEY_ID"
-          aws-region: "$AWS_DEFAULT_REGION"
       - run:
-          name: Load image and Push to ECR
+          name: Build and Push Docker image to ECR
           command: |
-            docker load --input workspace/build/image.tar &&
-            eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email) &&
-            docker tag "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/onestophomeservices:latest" "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/onestophomeservices:latest" &&
+            docker build -t "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/onestophomeservices:latest" .
+            eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
             docker push "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/onestophomeservices:latest"
 
 workflows:
