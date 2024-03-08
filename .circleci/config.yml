@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  aws-cli: circleci/aws-cli@1.0.0
+  aws-cli: circleci/aws-cli@0.1.4
 
 jobs:
   build:
@@ -19,13 +19,8 @@ jobs:
             docker build -t onestophomeservices .
             docker tag onestophomeservices:latest onestophomeservices:latest
       - run:
-          name: AWS ECR Login
-          command: |
-            $(aws ecr get-login --no-include-email --region us-east-1)
+          name: Log in to Amazon ECR
+          command: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 532597438699.dkr.ecr.us-east-1.amazonaws.com
       - run:
           name: Push Docker image to Amazon ECR
-          command: docker push onestophomeservices:latest
-          environment:
-            AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
-            AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-            AWS_DEFAULT_REGION: us-east-1
+          command: docker push 532597438699.dkr.ecr.us-east-1.amazonaws.com/onestophomeservices:latest
