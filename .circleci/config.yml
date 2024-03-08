@@ -17,10 +17,6 @@ jobs:
           name: Build image
           command: |
             docker build -t app:latest .
-      - persist_to_workspace:
-          root: .
-          paths:
-            - docker-image
   deploy:  
     docker:
       - image: circleci/python:3.6.1
