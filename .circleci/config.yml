@@ -19,7 +19,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - docker-image  # Ensure this directory contains your Docker image tar file
+            - app/docker-image  # Update the path to match the actual location of the Docker image tar file
   deploy:
     docker:
       - image: circleci/python:3.6.1
