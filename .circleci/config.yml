@@ -52,5 +52,6 @@ workflows:
     jobs:
       - build
       - deploy:
+          context: staging
           requires:
             - build
