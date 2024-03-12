@@ -10,13 +10,13 @@ const Toggle = () => {
             <div className="PricingApp">
                 <div className="app-container">
                     <input id="switch" type="checkbox" onChange={() => { setSelectMonthly(!selectMonthly); }} />
-                    <div class="app">
-                        <div class="content">
+                    <div className="app">
+                        <div className="content">
                             <label for="switch">
-                                <div class="toggle"></div>
-                                <div class="names">
-                                    <p class="light">Monthly</p>
-                                    <p class="dark">Annualy</p>
+                                <div className="toggle"></div>
+                                <div className="names">
+                                    <p className="light">Monthly</p>
+                                    <p className="dark">Annualy</p>
                                 </div>
                             </label>
                         </div>

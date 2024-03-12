@@ -4,6 +4,7 @@ import logo from '../images/logo.svg'
 import policy from './policy'
 import Plans from './Plans'
 import OneStopHomeService from '../pages/OneStop'
+
 const Header = () => {
     // <a href="">One stop home services</a>
     return (
@@ -11,11 +12,9 @@ const Header = () => {
             <header id="header" className="fixed-top d-flex align-items-center">
                 <div className="container d-flex justify-content-between">
                     <div className="logo">
-                        <a href={<OneStopHomeService/>}>
+                        <a href={<OneStopHomeService />}>
                             <img src={logo} alt="OneSiteHomeService" />
                         </a>
-                        <h1 className='d-flex align-'>
-                        </h1>
                     </div>
                     <nav id="navbar" className="navbar">
                         <ul>
@@ -50,6 +49,11 @@ const Header = () => {
                                 </NavLink>
                             </li>
                         </ul>
+                        <div>
+                            <a className="hamburger-menu">
+                            
+                            </a>
+                        </div>
                     </nav>
                 </div>
             </header>
