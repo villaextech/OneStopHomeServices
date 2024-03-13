@@ -37,7 +37,7 @@ const Contact = () => {
                                 <div className="address">
                                     <i className="bi bi-geo-alt" />
                                     <h4>Location:</h4>
-                                    <p>919 Terscott Ln Sugar Land, TX 77479, USA|
+                                    <p>919 Terscott Ln Sugar Land, TX 77479, USA | <br />
                                         ONE STOP HOME SERVICES, LLC</p>
                                 </div>
                                 <div className="email mt-4">

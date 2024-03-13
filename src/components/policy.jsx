@@ -8,7 +8,7 @@ const Policy = () => {
         <div>
             <Header />
             <div className='policy-main'>
-                <div className="policy-container">
+                <div className="policy-container" data-aos="fade-up-right">
                     <h1>Terms & Conditions</h1>
                     <span>Effective Date: ………, 2023   </span>
                     <br />
@@ -49,7 +49,7 @@ const Policy = () => {
 
 
 
-                <div className="policy-container">
+                <div className="policy-container" data-aos="fade-up-left">
                     <h1>Privacy Policy</h1>
                     <span>Effective Date: ………, 2023   </span>
                     <br />
@@ -90,7 +90,7 @@ const Policy = () => {
 
 
 
-                <div className="policy-container">
+                <div className="policy-container" data-aos="fade-up-right" >
                     <h1>Refund Policy</h1>
                     <p>
                         At One Stop Home Services, we are committed to ensuring the satisfaction of our clients. Our refund policy is designed to offer peace of mind and flexibility. Below are the details of our policy:

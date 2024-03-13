@@ -68,69 +68,89 @@ const PaymenthtmlForm = () => {
         <div>
             <Header />
             <div className="main-container">
-                <form className="form " onSubmit={handleSubmit}>
-                    <div className="titlee">Credit or debit card
-                        <img className='w-25' src={logos} alt="" />
+                <form className="form" onSubmit={handleSubmit} data-aos="fade-up-left" data-aos-duration="">
+                    <div className="titlee">Credit or Debit Card
+                        <img className='w-25 d-none d-md-flex' src={logos} alt="" />
                     </div>
-                    <p className="message">Payment information </p>
-                    <div className="flex">
-                        <label >
-                            <input className="input" type="text" placeholder="" required />
-                            <span>Firstname</span>
-                        </label>
-
-                        <label>
-                            <input className="input" type="text" placeholder="" required />
-                            <span>Lastname</span>
-                        </label>
+                    <p className="message" data-aos="fade-up">Payment Information </p>
+                    <div className="row">
+                        <div className='col-sm-12 col-md-6'>
+                            <label >
+                                <input className="input" type="text" placeholder="" required />
+                                <span>First name *</span>
+                            </label>
+                        </div>
+                        <div className=' col-sm-12 col-md-6'>
+                            <label>
+                                <input className="input" type="text" placeholder="" required />
+                                <span>Last name *</span>
+                            </label>
+                        </div>
                     </div>
-                    <div className='flex'>
-                        <label>
-                            {<input className="input" maxLength='14' type="tel" placeholder="" required />}
-                            <span>Phone no </span>
-                        </label>
-                        <label>
-                            {<input className="input" type="email" placeholder="" />}
-                            <span>Email </span>
-                        </label>
+                    <div className="row">
+                        <div className='col-sm-12 col-md-6 col-lg-6'>
+                            <label>
+                                <input className="input " maxLength='14' type="tel" placeholder="" required />
+                                <span>Phone no * </span>
+                            </label>
+                        </div>
+                        <div className='col-sm-12 col-md-6 col-lg-6'>
+                            <label>
+                                <input className="input" type="email" placeholder="" />
+                                <span>Email * </span>
+                            </label>
+                        </div>
                     </div>
-                    <div className='flex'>
-                        <label className='address'>
-                            <input type="text" className='input input-address' placeholder='' required />
-                            <span>Street Address</span>
-                        </label>
-                        <label>
-                            <input type="text" className='input' maxLength='25' placeholder='' required />
-                            <span>City</span>
-                        </label>
-                        <label>
-                            <input type="text" className='input' maxLength='2' placeholder='' required />
-                            <span>State</span>
-                        </label>
-                        <label>
-                            <input type="tel" className='input' maxLength='5' placeholder='' required />
-                            <span>Zip code</span>
-                        </label>
+                    <div className='row'>
+                        <div className='col-sm-12 col-md-6  col-lg-3'>
+                            <label className='address'>
+                                <input type="text" className='input input-address' placeholder='' required />
+                                <span>Street Address *</span>
+                            </label>
+                        </div>
+                        <div className='col-sm-12 col-md-6 col-lg-3 city'>
+                            <label>
+                                <input type="text" className='input' maxLength='25' placeholder='' required />
+                                <span>City *</span>
+                            </label>
+                        </div>
+                        <div className='col-sm-12 col-md-6 col-lg-3 state'>
+                            <label>
+                                <input type="text" className='input' maxLength='2' placeholder='' required />
+                                <span>State *</span>
+                            </label>
+                        </div>
+                        <div className='col-sm-12 col-md-6 col-lg-3 zip'>
+                            <label>
+                                <input type="tel" className='input' maxLength='5' placeholder='' required />
+                                <span>Zip code *</span>
+                            </label>
+                        </div>
                     </div>
-                    <div className='flex'>
-                        <label className='card-number'>
-                            <input className="input" type="text" maxLength='19' minLength='16' placeholder="" required onChange={handleCardNumberChange} value={formattedCardNumber} />
-                            <span>{'Card Number (0000 0000 0000 0000)'}</span>
-                        </label>
-                        <label>
-                            {<input className="input date-picker" type="text" maxLength='5' placeholder="" required onKeyUp={formatDate} />}
-                            <span>Expiration date <span> <i>( MM/YY )</i> </span> </span>
-                        </label>
-                        <label className=''>
-                            <input className="input" type="tel" inputMode="numeric" maxlength="4" minLength='3' placeholder="" required />
-                            <span>CVV/CVC <i>(000/0000)</i>
-                            </span>
-                        </label>
+                    <div className='row'>
+                        <div className='col-sm-12 col-md-6 col-lg-4 '>
+                            <label className=''>
+                                <input className="input input-card" type="text" maxLength='19' minLength='16' placeholder="" required onChange={handleCardNumberChange} value={formattedCardNumber} />
+                                <span>{'Card Number (0000 0000 0000 0000) *'}</span>
+                            </label>
+                        </div>
+                        <div className='col-sm-12 col-md-6 col-lg-4'>
+                            <label>
+                                {<input className="input input-exdate" type="text" maxLength='5' placeholder="" required onKeyUp={formatDate} />}
+                                <span>Expiration date <span> <i>( MM/YY ) *</i> </span> </span>
+                            </label>
+                        </div>
+                        <div className='col-sm-12 col-md-6 col-lg-4'>
+                            <label>
+                                <input className="input" type="tel" inputMode="numeric" maxlength="4" minLength='3' placeholder="" required />
+                                <span>CVV/CVC <i>(000/0000) *</i>
+                                </span>
+                            </label>
+                        </div>
                     </div>
-                    <button className="submit">Continue</button>
+                    <button className="submit submit-payment-form container-sm bg-warning text-dark mt-3" >Continue</button>
                 </form>
             </div>
-            <Footer />
         </div>
     )
 }

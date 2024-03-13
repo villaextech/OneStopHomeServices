@@ -4,6 +4,7 @@ import logo from '../images/logo.svg'
 import policy from './policy'
 import Plans from './Plans'
 import OneStopHomeService from '../pages/OneStop'
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 const Header = () => {
     // <a href="">One stop home services</a>
@@ -51,7 +52,6 @@ const Header = () => {
                         </ul>
                         <div>
                             <a className="hamburger-menu">
-                            
                             </a>
                         </div>
                     </nav>
