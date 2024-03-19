@@ -75,7 +75,7 @@ const PaymenthtmlForm = () => {
                     <p className="message" data-aos="fade-up">Payment Information </p>
                     <div className="row">
                         <div className='col-sm-12 col-md-6'>
-                            <label >
+                            <label>
                                 <input className="input" type="text" placeholder="" required />
                                 <span>First name *</span>
                             </label>

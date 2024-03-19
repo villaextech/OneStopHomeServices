@@ -1,19 +1,20 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import Hero from './Hero'
 const About = () => {
     return (
-        <>
+        <div>
+            <Header />
             <section id="about" className="about">
-                <Header />
-                <div className="container mt-4">
-                    <div className="row">
+                <div className="container mb-5">
+                    <div className="row mt-3">
                         <div className="col-xl-6 col-lg-7 about-image" data-aos="fade-right">
                             <img src="./img/about-img.jpg" className="img-fluid" alt="" />
                         </div>
-                        <div className="col-xl-6 col-lg-5 pt-5 pt-lg-0">
-                            <h1 className='' data-aos="fade-up">About Us</h1>
-                            <p data-aos="fade-up">
+                        <div className="col-xl-6 col-lg-5 pt-sm-0 pt-md-3 pt-lg-0">
+                            <h1 className='text-light' data-aos="fade-up">About Us</h1>
+                            <p className='text-light' data-aos="fade-up">
                                 At One Stop Home Services, where quality and convenience meet, discover the difference.
                             </p>
                             <div className="icon-box" data-aos="fade-up">
@@ -42,7 +43,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 

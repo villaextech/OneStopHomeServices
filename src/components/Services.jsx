@@ -7,14 +7,14 @@ const Services = () => {
             <section id="services" className="services section-bg ">
                 <div className="container">
                     <div className="section-title" data-aos="fade-up">
-                        <h2 className='mt-3'>Services</h2>
-                        <p>Find simple answers to all of your home's problems. Our services are made with contemporary homes in mind, simplifying and enhancing daily living.</p>
+                        <h2 className='mt-3 text-light'>Services</h2>
+                        <p className='text-light'>Find simple answers to all of your home's problems. Our services are made with contemporary homes in mind, simplifying and enhancing daily living.</p>
                     </div>
                     <div className="row">
                         <div className="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
                             <div className="icon-box icon-box-pink">
                                 <div className="icon"><i className='bx bxs-flame'></i></div>
-                                <h4 className="title"><a href="#plans">Utility Services</a></h4>
+                                <h4 className="title"><a href="">Utility Services</a></h4>
                                 <p className="description">
                                     Use our specialized solutions to manage your utilities without fuss. We guarantee prompt and effective services whether you require connections for gas, water, or electricity. In order to give you a seamless experience and free you up to concentrate on what really matters—enjoying your home—our staff works closely with leading utility providers.
                                 </p>
@@ -45,7 +45,7 @@ const Services = () => {
                         <div className=" col-lg-2 d-flex align-items-stretch mt-2 mt-lg-3" id='home_warranty' data-aos="fade-up"
                             data-aos-delay="200">
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mt-2 mt-lg-3" data-aos="fade-up"
+                        <div className="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mt-2 mt-lg-3" data-aos="fade-up"
                             data-aos-delay="300">
                             <div className="icon-box icon-box-blue">
                                 <div className="icon"><i className='bx bx-bug-alt'></i></div>
@@ -55,7 +55,7 @@ const Services = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mt-2 mt-lg-3" data-aos="fade-up"
+                        <div className="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mt-3 mt-lg-3" data-aos="fade-up"
                             data-aos-delay="300">
                             <div className="icon-box icon-box-cyan">
                                 <div className="icon"><i className="bx bx-slider-alt"></i></div>
@@ -66,7 +66,7 @@ const Services = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className=" col-lg-2 d-flex align-items-stretch mt-2 mt-lg-3" data-aos="fade-up"
+                        <div className=" col-lg-2" data-aos="fade-up"
                             data-aos-delay="200">
                         </div>
 

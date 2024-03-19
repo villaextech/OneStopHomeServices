@@ -1,10 +1,13 @@
 .policy-main {
   /* position: absolute; */
   padding: 50px;
+  color: white;
   /* top: 10ch;
   left: 4%; */
-  background: linear-gradient(190deg, rgb(224, 208, 162) 5%,rgb(218, 135, 79) 50%, transparent);
+  /* background: linear-gradient(190deg, rgb(224, 208, 162) 5%,rgb(218, 135, 79) 50%, transparent); */
+  background: linear-gradient(240deg, rgb(85, 85, 79) 10%, rgb(219, 114, 43) 40%, transparent);
 }
+
 
 .policy-container {
   background-color: #f9f9f9;
@@ -15,17 +18,19 @@
   width: auto;
   position: relative;
   top: 5ch;
-  background: linear-gradient(360deg, rgb(230, 177, 32) 5%,rgb(238, 147, 86)40%, transparent);
+  background: linear-gradient(360deg, rgb(230, 177, 32) 5%,rgb(238, 147, 86)40%);
+
 
 }
 
 .contentt {
   position: relative;
   left: 2%;
+  color: white;
 }
 
 .policy-container h2 {
-  color: #000000;
+  color: #ffffff;
 }
 
 .policy-container p {

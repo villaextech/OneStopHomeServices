@@ -1,11 +1,13 @@
 import React from 'react'
+import Header from './Header'
 
 const Faq = () => {
     return (
         <section id="faq" className="faq section-bg">
+            <Header />
             <div className="container">
-                <div className="section-title" data-aos="fade-up-right">
-                    <h2>FAQ</h2>
+                <div className="section-title text-light" data-aos="fade-up-right">
+                    <h2 className='text-light'>FAQ</h2>
                     <p>
                         Answers to Your Common Questions – Simplifying Home Services with One Stop FAQs.
                     </p>

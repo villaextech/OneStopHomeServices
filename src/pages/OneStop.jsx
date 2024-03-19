@@ -10,7 +10,6 @@ import Faq from '../components/Faq'
 const OneStopHomeService = () => {
     return (
         <div>
-            <Header />
             <Hero />
             <main id="main">
                 <About />
@@ -19,7 +18,6 @@ const OneStopHomeService = () => {
                 <Faq />
                 <Contact />
             </main>
-            <Footer />
         </div>
 
     )
