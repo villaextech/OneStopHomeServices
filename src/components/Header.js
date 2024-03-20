@@ -1,51 +1,65 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import logo from '../images/logo.svg'
 import policy from './policy'
 import Plans from './Plans'
 import OneStopHomeService from '../pages/OneStop'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { GoX } from "react-icons/go";
+
 const Header = () => {
     // <a href="">One stop home services</a>
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-            <header id="header" className="fixed-top d-flex align-items-center">
+            <header id="header" className="fixed-top d-flex align-items-center header">
                 <div className="container d-flex justify-content-between">
                     <div className="logo">
-                        <a href={<OneStopHomeService/>}>
+                        <a href={<OneStopHomeService />}>
                             <img src={logo} alt="OneSiteHomeService" />
                         </a>
-                        <h1 className='d-flex align-'>
-                        </h1>
                     </div>
                     <nav id="navbar" className="navbar">
-                        <ul>
+                        <ul className={isOpen ? 'open' : 'close'} >
                             <li>
-                                <NavLink className="nav-link " to='/' href="#hero">
+                                <NavLink className="nav-link " to='/'>
+                                    <span>
+                                    </span>
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-link " to='/plans' href='#plans'>
+                                <NavLink className="nav-link " to='/plans' >
+                                    <span>
+                                    </span>
                                     Plans
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-link " to='/about' href="#about">
+                                <NavLink className="nav-link " to='/about' >
+                                    <span>
+                                    </span>
                                     About
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-link " to='/services' href="#services">
+                                <NavLink className="nav-link " to='/services' >
+                                    <span>
+                                    </span>
                                     Services
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav-link  " to='/policy'>
+                                    <span>
+                                    </span>
                                     Policies
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav-link " to='/contact' href="/">
+                                <NavLink className="nav-link " to='/contact' >
+                                    <span>
+                                    </span>
                                     Contact
                                 </NavLink>
                             </li>

@@ -20,7 +20,7 @@ const Footer = () => {
                                     <br />
                                     <strong>Phone:</strong> 906.401.2064
                                     <br />
-                                    <strong>Email:</strong> custsvc@
+                                    <strong>Email:</strong> custsvc@1stophomeservices.us
                                     <br />
                                 </p>
                             </div>
@@ -55,23 +55,23 @@ const Footer = () => {
                             <ul>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <NavLink to='/services' href="#services">Utilitiy Services</NavLink>
+                                    <Link to='/services' href="#services">Utilitiy Services</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <NavLink to='./services' href="#services">Home Security</NavLink>
+                                    <Link to='./services' href="#services">Home Security</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <NavLink to='/services' href="#services">Telecom Services</NavLink>
+                                    <Link to='/services' href="#services">Telecom Services</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <NavLink to='/services' href={<Services/>}>Home Warranty</NavLink>
+                                    <Link to='/services' href={<Services/>}>Home Warranty</Link>
                                 </li>
                                 <li>
                                     <i className="bx bx-chevron-right" />
-                                    <NavLink to='/services' href="#home_warranty">Home Automation</NavLink>
+                                    <Link to='/services' href="#home_warranty">Home Automation</Link>
                                 </li>
                             </ul>
                         </div>
@@ -82,7 +82,7 @@ const Footer = () => {
                 <div className="copyright">
                     © Copyright{" "}
                     <strong>
-                        <span>One Stop Home Services</span>
+                        <span>OneStopHomeServices</span>
                     </strong>
                     . All Rights Reserved
                 </div>

@@ -1,24 +1,25 @@
-
-:root {
+/* :root {
     background: rgb(37, 34, 34)
-}
+} */
 
 .main-container {
     /* width: 100%;
     position: relative; */
     /* background-color: #d60d0d; */
-    height: 800px;
-    background: linear-gradient(190deg, rgb(36, 27, 27) 50%,rgb(204, 133, 0)50%, transparent);
-    
+    height: 1200px;
+    background: linear-gradient(190deg, rgb(36, 27, 27) 50%, rgb(204, 133, 0)50%, transparent);
+    position: relative;
+
     .form {
         border: 3px solid rgb(238, 177, 177);
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 70%;
-        /* max-width: 90%; */
+        height: auto;
         padding: 20px;
         border-radius: 20px;
+        /* margin: 120px auto; */
         position: absolute;
         left: 15%;
         top: 10ch;
@@ -39,8 +40,46 @@
         display: flex;
         align-items: center;
         padding-left: 30px;
-        color: #00bfff;
+        /* color: #00bfff; */
+        /* color: #00bfff; */
+        
+        color: #d4a712;
         gap: 10px;
+    }
+
+    @media (max-width: 485px) {
+
+        .titlee,
+        .message {
+            font-size: 20px !important;
+        }
+
+    }
+
+    @media (max-width: 357px) {
+
+        .titlee,
+        .message {
+            font-size: 15px !important;
+        }
+    }
+
+    @media (max-width: 295px) {
+
+        .titlee,
+        .message {
+            font-size: 10px !important;
+        }
+    }
+
+    @media (max-width: 750px) {
+        .row {
+            margin-bottom: auto;
+        }
+
+        .col-sm-12 {
+            margin-bottom: -60px;
+        }
     }
 
     .titlee::before {
@@ -62,7 +101,9 @@
         width: 16px;
         border-radius: 50%;
         left: 0px;
-        background-color: #00bfff;
+        /* background-color: #ffffff; */
+        background-color: #d4a712;
+
     }
 
     .message {
@@ -75,13 +116,10 @@
     .flex {
         display: flex;
         width: 100%;
-        gap: 6px;
+        gap: 2px;
         margin-block: -18px !important;
     }
 
-    .address {
-        width: 310%;
-    }
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -102,11 +140,10 @@
         outline: 0;
         border: 1px solid rgba(105, 105, 105, 0.397);
         border-radius: 10px;
+        margin: 0%;
+        overflow: hidden;
     }
 
-    .card-number {
-        width: 205%;
-    }
 
     .form label .input+span {
         color: rgba(255, 255, 255, 0.5);
@@ -123,11 +160,245 @@
         font-size: 0.9em;
     }
 
+    @media (max-width: 472px) {
+
+        .form label .input:placeholder-shown+span {
+            overflow: hidden;
+            top: 3px;
+            font-size: 1em;
+            font-weight: 300;
+        }
+
+        .form label .input:focus+span {
+            color: #96a6ac;
+            top: 0px;
+            font-size: 0.8em !important;
+            /* font-weight: 400; */
+            overflow: hidden;
+        }
+    }
+
+    @media (max-width: 200px) {
+
+        .form label .input:placeholder-shown+span {
+            font-size: 0.5em;
+        }
+    }
+
+    @media (max-width: 150px) {
+
+        .form label .input:placeholder-shown+span {
+            display: none;
+        }
+    }
+
+    @media (max-width: 414px) {
+
+        .form label .input-card:focus+span {
+            font-size: 0.66em !important;
+
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1300px) {
+
+        .form label .input:placeholder-shown+span {
+            font-size: 0.7em;
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 769px) {
+
+        .form label .input:placeholder-shown+span {
+            font-size: 0.9em;
+            top: 2px;
+        }
+
+        .form label .input:focus+span {
+            top: 4px !important;
+        }
+    }
+
+    @media only screen and (min-width: 820px) and (max-width: 821px) {
+
+        .form label .input:placeholder-shown+span {
+            font-size: 1.1em;
+            top: 4px;
+        }
+
+        .form label .input-card:placeholder-shown+span {
+            font-size: 1em;
+            top: 2px;
+        }
+
+        .form label .input:focus+span {
+            font-size: 13px !important;
+            top: 4px !important;
+        }
+
+        .form label .input-card:focus+span {
+            font-size: 12px !important;
+            top: 4px !important;
+        }
+
+        .form label .input-exdate:focus+span {
+            font-size: 12px !important;
+            top: 3px !important;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1024px) {
+
+        /* .row{
+            margin-bottom: 10px;
+        } */
+        .form {
+            position: relative;
+            top: 20cap;
+            left: 5ch;
+            width: 90%;
+        }
+
+        .form label .input:placeholder-shown+span {
+
+            font-size: 1.2em;
+            top: 3px;
+        }
+
+        .form label .input-card:placeholder-shown+span {
+
+            font-size: 1em;
+            top: 1px;
+        }
+
+        .form label .input:focus+span {
+            font-size: 1em !important;
+            top: 0.9px !important;
+        }
+
+        .form label .input-card:focus+span {
+            font-size: 0.9em !important;
+            top: 0.9px !important;
+        }
+
+        .form label .input-exdate:focus+span {
+            font-size: 1em !important;
+            top: 0.8px !important;
+        }
+    }
+
+    @media only screen and (min-width: 912px) and (max-width: 912px) {
+        .form label .input:placeholder-shown+span {
+            font-size: 1.2em;
+            top: 3px;
+        }
+
+        .form label .input-card:placeholder-shown+span {
+            font-size: 1em;
+            top: 1px;
+        }
+
+        .form label .input:focus+span {
+            font-size: 1em !important;
+            top: 0.9px !important;
+        }
+
+        .form label .input-card:focus+span,
+        .form label .input-exdate:focus+span {
+            font-size: 0.9em !important;
+            top: 0.6px !important;
+        }
+
+    }
+
+    @media only screen and (min-width: 280px) and (max-width: 280px) {
+        .form label .input-card:placeholder-shown+span {
+            font-size: 0.7em !important;
+            top: 7px;
+        }
+
+        .form label .input-exdate:placeholder-shown+span {
+            font-size: 0.7em !important;
+            top: 12px;
+        }
+
+        .form label .input-card:focus+span {
+            font-size: 0.46em !important;
+            top: 0.6em !important;
+        }
+
+        .form label .input-exdate:focus+span {
+            font-size: 0.6em !important;
+            top: 0.9px !important;
+        }
+
+    }
+
+    @media only screen and (min-width: 853px) and (max-width: 853px) {
+        /* Landscape phones and down */
+
+        .form label .input:placeholder-shown+span {
+            font-size: 1.4em;
+            top: 0.39em;
+        }
+
+        .form label .input-card:placeholder-shown+span {
+            font-size: 1em;
+            top: 1px;
+        }
+
+        .form label .input-exdate:placeholder-shown+span {
+            font-size: 1.1em;
+            top: 0.6em;
+        }
+
+        .form label .input:focus+span {
+            font-size: 0.9em !important;
+            top: 0.1em !important;
+        }
+
+        .form label .input-exdate:focus+span {
+            font-size: 0.9em !important;
+            top: 0em !important;
+        }
+
+        .form label .input-card:focus+span {
+            font-size: 0.8em !important;
+            top: 0.1em !important;
+        }
+
+        .form label .input-exdate {
+            height: auto;
+        }
+    }
+
+    @media only screen and (min-width: 1280px) and (max-width: 1280px) {
+        .form label .input:placeholder-shown+span {
+            font-size: 1em;
+            top: 0.7em;
+        }
+        .form label .input-card:placeholder-shown+span {
+            font-size: 0.8em;
+            top: 1em;
+        }
+        .form label .input:focus+span {
+            font-size: 0.9em !important;
+            top: 0.09em !important;
+        }
+        .form label .input-card:focus+span {
+            font-size: 0.7em !important;
+            top: 0.1em !important;
+        }
+    }
+
+
     .form label .input:focus+span {
-        color: #00bfff;
+        color: #d4a712;
+
         top: 0px;
         font-size: 0.7em;
         font-weight: 600;
+        overflow: hidden;
     }
 
     .input::placeholder {
@@ -135,7 +406,7 @@
         margin-top: 5px;
     }
 
-    .submit {
+    .submit-payment-form {
         border: none;
         outline: none;
         padding: 10px;
@@ -144,13 +415,56 @@
         font-size: 16px;
         transform: .3s ease;
         background-color: #00bfff;
+        width: 20%;
     }
 
     .submit:hover {
         background-color: #00bfff96;
+        width: 30%;
+        transition: 0.6s ease-in-out;
     }
 
 }
+
+.row {
+    margin-bottom: -40px;
+}
+
+@media (max-width: 991px) {
+
+    .state,
+    .zip {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 751px) {
+
+    .state,
+    .zip {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 640px) {
+    .submit-payment-form {
+        min-width: 50% !important;
+    }
+}
+
+@media (max-width: 300px) {
+    .submit-payment-form {
+        min-width: 90% !important;
+        font-size: smaller;
+    }
+}
+
+/* @media (max-width: 878px) {
+
+    .form label .input {
+        width: 100% !important;
+    }
+} */
 
 @keyframes pulse {
     from {

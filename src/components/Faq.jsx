@@ -1,13 +1,15 @@
 import React from 'react'
+import Header from './Header'
 
 const Faq = () => {
     return (
         <section id="faq" className="faq section-bg">
+            <Header />
             <div className="container">
-                <div className="section-title" data-aos="fade-up">
-                    <h2>F.A.Q</h2>
+                <div className="section-title text-light" data-aos="fade-up-right">
+                    <h2 className='text-light'>FAQ</h2>
                     <p>
-                        "Answers to Your Common Questions – Simplifying Home Services with One Stop FAQs."
+                        Answers to Your Common Questions – Simplifying Home Services with One Stop FAQs.
                     </p>
                 </div>
                 <div className="faq-list">
@@ -18,7 +20,7 @@ const Faq = () => {
                                 className="collapse"
                                 data-bs-target="#faq-list-1"
                             >
-                                What is the 'One Stop Home Services'?
+                                What is the One Stop Home Services?
                                 <i className="bx bx-chevron-down icon-show" />
                                 <i className="bx bx-chevron-up icon-close" />
                             </a>

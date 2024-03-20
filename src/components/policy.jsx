@@ -7,8 +7,8 @@ const Policy = () => {
     return (
         <div>
             <Header />
-            <div className='policy-main'>
-                <div className="policy-container">
+            <div className='policy-main '>
+                <div className="policy-container " data-aos="fade-up-right">
                     <h1>Terms & Conditions</h1>
                     <span>Effective Date: 7 March 2023   </span>
                     <br />
@@ -49,9 +49,9 @@ const Policy = () => {
 
 
 
-                <div className="policy-container">
+                <div className="policy-container" data-aos="fade-up-left">
                     <h1>Privacy Policy</h1>
-                    <span>Effective Date: ………, 2023   </span>
+                    <span>Effective Date: 7-Mar-2024   </span>
                     <br />
                     <i>At One Stop Home Services, located in the United States, we prioritize the privacy and security of our website visitors and users. This Privacy Policy outlines the types of information we collect, how we use and protect it, and the choices you have regarding your personal information. <br /> By accessing or using our  <a className='link-style-none' href={<OneStopHomeService />}>One Stop Home Services</a> , you agree to the terms of this Privacy Policy</i>
 
@@ -90,7 +90,7 @@ const Policy = () => {
 
 
 
-                <div className="policy-container">
+                <div className="policy-container" data-aos="fade-up-right" >
                     <h1>Refund Policy</h1>
                     <p>
                         At One Stop Home Services, we are committed to ensuring the satisfaction of our clients. Our refund policy is designed to offer peace of mind and flexibility. Below are the details of our policy:
@@ -145,7 +145,6 @@ const Policy = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

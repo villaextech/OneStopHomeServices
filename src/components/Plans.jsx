@@ -4,14 +4,14 @@ import PlansDetail from './PlansDetail'
 const Plans = () => {
     return (
         <>
+            <Header />
             <section id="plans" className="plans">
-                <Header />
-                <div className="container container-plans mt-4">
+                <div className="container container-plans mt-4 mb-sm-5">
                     <div className="section-title" data-aos="fade-up">
-                        <h1 className=' bg-transparent container'><span className='text-dark'>Plans</span></h1>
+                        <h1 className=' bg-transparent container'><span className='text-light'>Plans</span></h1>
                     </div>
                     <div className="row">
-                        <div className="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                        <div className="col-sm-12 col-xl-4 col-lg-4 col-md-6" data-aos="zoom-in-right">
                             <div className="member">
                                 <PlansDetail
                                     title={"Utility Services"}
@@ -21,7 +21,7 @@ const Plans = () => {
                                 />
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                        <div className="col-sm-12 col-xl-4 col-lg-4 col-md-6" data-aos="zoom-in-right">
                             <div className="member">
                                 <PlansDetail
                                     title={"Home Security"}
@@ -31,7 +31,7 @@ const Plans = () => {
                                 />
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                        <div className="col-sm-12 col-xl-4 col-lg-4 col-md-6" data-aos="zoom-in-right">
                             <div className="member">
                                 <PlansDetail
                                     title={"Telecom Services"}
@@ -42,9 +42,8 @@ const Plans = () => {
                             </div>
                         </div>
 
-                    </div>
-                    <div className='row'>
-                        <div className="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+
+                        <div className="col-sm-12 col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
                             <div className="member">
                                 <PlansDetail
                                     title={"Home Warranty"}
@@ -54,7 +53,7 @@ const Plans = () => {
                                 />
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                        <div className="col-sm-12 col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
                             <div className="member">
                                 <PlansDetail
                                     title={"Home Automation"}
@@ -64,7 +63,7 @@ const Plans = () => {
                                 />
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                        <div className="col-sm-12 col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
                             <div className="member">
                                 <PlansDetail
                                     title={"Custom"}

@@ -12,16 +12,17 @@
   /* border: 1px solid rgb(22, 102, 223); */
   margin-right: 10px;
   margin: 10px;
-  
+
   &:hover {
     /* border: 1px solid rgb(240, 204, 0); */
     cursor: pointer;
-    transition: 0.1s  ease-in-out;
+    transition: 0.1s ease-in-out;
+    transform: translateY(-7px);
+    /* transform: scale(1.02); */
     /* box-shadow: 0 0px 0px 3px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
     /* -moz-transition: 0.1s ease-in-out;
     -webkit-transition: 0.1s ease-in-out;
     -o-transition: 0.2s ease-in-out; */
-    transform: scale(1.02);
     /* box-shadow: none; */
     /* box-shadow: 0 0px 0px 0px rgb(0 0 0 / 0.1), 0 0px 0px -2px rgb(0 0 0 / 0.1); */
     /* border: 1px solid rgb(22, 102, 223); */
@@ -49,13 +50,38 @@
 
 .pack-container .header .title {
   /* display: block; */
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.7rem;
   line-height: 4rem;
   text-transform: capitalize;
   color: #ffffff;
   text-align: left;
   /* background-color: #494949; */
+}
+
+@media only screen and (min-width: 280px) and (max-width: 280px) {
+  .pack-container .header .title {
+    font-size: 1rem;
+    /* font-weight:bold; */
+
+  }
+
+  .price-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 4px !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+
+  .custom-plan {
+    position: relative;
+    left: 20px !important;
+  }
 }
 
 svg {
@@ -68,7 +94,7 @@ svg {
   justify-content: flex-start;
   align-items: baseline;
   gap: 9px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* font-family:Georgia, 'Times New Roman', Times, serif; */
   /* font-family: 'rubik'; */
   font-size: 2.5rem;
@@ -109,14 +135,15 @@ svg {
   letter-spacing: normal;
   line-height: 1rem;
   text-wrap: nowrap;
-  overflow-wrap:break-word;
+  overflow-wrap: break-word;
   color: #e2d408;
   position: relative;
   left: 70px;
 }
-.pricee{
-  font-weight:bolder;
-  color:rgb(216, 187, 24);
+
+.pricee {
+  font-weight: bolder;
+  color: rgb(216, 187, 24);
 }
 
 .lists {
@@ -154,7 +181,7 @@ svg {
 
 .list p {
   display: block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .button-container {
@@ -181,3 +208,23 @@ svg {
     border: #ffffff 1px solid;
   }
 }
+
+/* .plans {
+  background: transparent url('../../public/img/section2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about{
+  background: transparent url('../../public/img/section4.jpg') top center fixed;
+  background-size:cover;
+  background-repeat: no-repeat; 
+  position: relative;
+}
+
+
+#services {
+  content: "";
+  background-image: url('../../public/img/section1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+} */

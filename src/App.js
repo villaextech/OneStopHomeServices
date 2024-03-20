@@ -1,5 +1,4 @@
-// import { useState } from "react";
-// import PricingCard from "./components/PricingCard";
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import "./styles/PricingApp.css";
 import OneStopHomeService from '../src/pages/OneStop';
@@ -14,6 +13,7 @@ import { Suspense, lazy } from 'react';
 import Policy from './components/policy';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 const PaymentForm = lazy(() => import('./components/PaymentForm'));
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
           <Route path='/contact' element={<Contact />}>  </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

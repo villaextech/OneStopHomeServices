@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from './Header'
 import Swal from 'sweetalert2'
-import Footer from './Footer'
 const Contact = () => {
     // e.preventDefault();
     // alert('Your infomation submitted!')
@@ -13,18 +12,15 @@ const Contact = () => {
             showConfirmButton: false,
             timer: 5000
         });
-
     }
-
-
     return (
         <>
+            <Header />
             <section id="contact" className="contact">
-                <Header />
-                <div className="container mt-3">
+                <div className="container container-contact mt-3 mb-5">
                     <div className="section-title" data-aos="fade-up">
-                        <h2 className=''>Contact</h2>
-                        <p>
+                        <h2 className='text-light'>Contact</h2>
+                        <p className='text-light'>
                             Please contact us whenever you like. We pledge to get back to you as soon as we can!
                         </p>
                     </div>
@@ -32,18 +28,18 @@ const Contact = () => {
                         className="row no-gutters justify-content-center gap-5"
                         data-aos="fade-up"
                     >
-                        <div className="col-lg-5 d-flex align-items-stretch">
+                        <div className="col-lg-5 d-flex align-items-stretch contact-details">
                             <div className="info d-flex flex-column justify-content-center align-items-stretch ">
                                 <div className="address">
                                     <i className="bi bi-geo-alt" />
                                     <h4>Location:</h4>
-                                    <p>919 Terscott Ln Sugar Land, TX 77479, USA\
+                                    <p>919 Terscott Ln Sugar Land, TX 77479, USA | <br />
                                         ONE STOP HOME SERVICES, LLC</p>
                                 </div>
                                 <div className="email mt-4">
                                     <i className="bi bi-envelope" />
                                     <h4>Email:</h4>
-                                    <p>info@example.com</p>
+                                    <p>custsvc@1stophomeservices.us</p>
                                 </div>
                                 <div className="phone mt-4">
                                     <i className="bi bi-phone" />
@@ -52,13 +48,13 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-5 d-flex  justify-content-center">
+                        <div className="col-lg-5 d-flex justify-content-center map-container">
                             <div className="mapouter">
                                 <div className="gmap_canvas">
                                     <iframe
 
                                         width={602}
-                                        height={400}
+                                        height={500}
                                         id="gmap_canvas"
                                         src="https://maps.google.com/maps?q=sugar+land&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                         frameBorder={0}
@@ -80,7 +76,7 @@ const Contact = () => {
                                     <style
                                         dangerouslySetInnerHTML={{
                                             __html:
-                                                ".gmap_canvas{overflow: hidden;background: none !important;height: 400px;width: 550px;}"
+                                                ".gmap_canvas{overflow:hidden;background: none !important;height: 400px;width: 530px;}"
                                         }}
                                     />
                                 </div>
@@ -88,7 +84,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="row mt-5 justify-content-center" data-aos="fade-up">
-                        <div className="col-lg-10">
+                        <div className="col-lg-10 mt-3">
                             <form
                                 onSubmit={handleSubmit}
                                 className="php-email-form"
@@ -114,7 +110,7 @@ const Contact = () => {
                                             required />
                                     </div>
                                 </div>
-                                <div className="form-group mt-3">
+                                <div className="form-group mt-5">
                                     <input
                                         type="text"
                                         className="form-control"
