@@ -12,12 +12,13 @@ jobs:
       - run:
           name: Build image
           command: |
-            docker build -t onehomeservices/app:latest .
+            TAG=$CIRCLE_BRANCH-${CIRCLE_SHA1:0:7}
+            docker build -t onehomeservices/app:$TAG .
       - run:
           name: Save image to an archive
           command: |
             mkdir docker-image
-            docker save -o docker-image/image.tar onehomeservices/app:latest
+            docker save -o docker-image/image.tar onehomeservices/app:$TAG
       - persist_to_workspace:
           root: .
           paths:
