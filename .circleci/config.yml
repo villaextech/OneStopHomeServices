@@ -17,12 +17,14 @@ jobs:
       - run:
           name: Save image to an archive
           command: |
-            mkdir docker-image
+            pwd
+            mkdir -p docker-image
+            ls -la
             docker save -o docker-image/image.tar onehomeservices/app:$TAG
       - persist_to_workspace:
           root: .
           paths:
-            - docker-image/  # Corrected path to the Docker image tar file directory
+            - docker-image/
   deploy:
     docker:
       - image: circleci/python:3.6.1
@@ -40,7 +42,7 @@ jobs:
       - run:
           name: Load image
           command: |
-            docker load --input workspace/docker-image/image.tar  # Load the Docker image tar file
+            docker load --input workspace/docker-image/image.tar
       - run:
           name: Push image
           command: |
