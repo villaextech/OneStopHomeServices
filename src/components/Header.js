@@ -6,6 +6,9 @@ import Plans from './Plans'
 import OneStopHomeService from '../pages/OneStop'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GoX } from "react-icons/go";
+import { GiIconName } from 'react-icons/gi';
+import { GoIconName } from 'react-icons/go';
+
 
 const Header = () => {
     // <a href="">One stop home services</a>
