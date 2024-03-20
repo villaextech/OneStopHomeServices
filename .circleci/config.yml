@@ -13,12 +13,12 @@ jobs:
       - run:
           name: Build image
           command: |
-            docker build -t onehomeservices/app:$CIRCLE_SHA .
+            docker build -t onehomeservices/app:$CIRCLE_SHA1 .
       - run:
           name: Save image to an archive
           command: |
             mkdir docker-image
-            docker save -o docker-image/image.tar onehomeservices/app:$CIRCLE_SHA
+            docker save -o docker-image/image.tar onehomeservices/app:$CIRCLE_SHA1
       - persist_to_workspace:
           root: .
           paths:
@@ -46,7 +46,7 @@ jobs:
           name: Push image
           command: |
             eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-            docker tag onehomeservices/app:$CIRCLE_SHA $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:$CIRCLE_BRANCH
+            docker tag onehomeservices/app:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:$CIRCLE_BRANCH
             docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:$CIRCLE_BRANCH
 
 workflows:
