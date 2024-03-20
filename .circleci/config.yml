@@ -18,6 +18,7 @@ jobs:
       - run:
           name: Save image to an archive
           command: |
+            TAG="${CIRCLE_BRANCH}-${CIRCLE_SHA1}"
             mkdir docker-image
             docker save -o docker-image/image.tar onehomeservices/app:${TAG}
       - persist_to_workspace:
@@ -46,6 +47,7 @@ jobs:
       - run:
           name: Push image
           command: |
+            TAG="${CIRCLE_BRANCH}-${CIRCLE_SHA1}"
             eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
             docker tag onehomeservices/app:${TAG} $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:${TAG}
             docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:${TAG}
