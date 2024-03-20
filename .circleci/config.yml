@@ -10,24 +10,18 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Debug Output
-          command: |
-            echo "CIRCLE_BRANCH: $CIRCLE_BRANCH"
-            echo "CIRCLE_SHA1: ${CIRCLE_SHA1:0:7}"
-      - run:
           name: Build image
           command: |
-            TAG=$CIRCLE_BRANCH-${CIRCLE_SHA1:0:7}
-            docker build -t onehomeservices/app:$TAG .
+            docker build -t onehomeservices/app:latest .
       - run:
           name: Save image to an archive
           command: |
-            mkdir -p docker-image
-            docker save -o docker-image/image.tar onehomeservices/app:$TAG
+            mkdir docker-image
+            docker save -o docker-image/image.tar onehomeservices/app:latest
       - persist_to_workspace:
           root: .
           paths:
-            - docker-image/
+            - docker-image/  # Corrected path to the Docker image tar file directory
   deploy:
     docker:
       - image: circleci/python:3.6.1
@@ -45,13 +39,13 @@ jobs:
       - run:
           name: Load image
           command: |
-            docker load --input workspace/docker-image/image.tar
+            docker load --input workspace/docker-image/image.tar  # Load the Docker image tar file
       - run:
           name: Push image
           command: |
             eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-            docker tag onehomeservices/app:$TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:$TAG
-            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:$TAG
+            docker tag onehomeservices/app:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:latest
+            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/onestophomeservices:latest
 
 workflows:
   build-deploy:
