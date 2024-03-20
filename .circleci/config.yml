@@ -10,6 +10,11 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Debug Output
+          command: |
+            echo "CIRCLE_BRANCH: $CIRCLE_BRANCH"
+            echo "CIRCLE_SHA1: ${CIRCLE_SHA1:0:7}"
+      - run:
           name: Build image
           command: |
             TAG=$CIRCLE_BRANCH-${CIRCLE_SHA1:0:7}
@@ -17,9 +22,7 @@ jobs:
       - run:
           name: Save image to an archive
           command: |
-            pwd
             mkdir -p docker-image
-            ls -la
             docker save -o docker-image/image.tar onehomeservices/app:$TAG
       - persist_to_workspace:
           root: .
