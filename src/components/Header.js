@@ -6,9 +6,6 @@ import Plans from './Plans'
 import OneStopHomeService from '../pages/OneStop'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GoX } from "react-icons/go";
-import { GiIconName } from 'react-icons/gi';
-import { GoIconName } from 'react-icons/go';
-
 
 const Header = () => {
     // <a href="">One stop home services</a>
@@ -23,40 +20,40 @@ const Header = () => {
                         </a>
                     </div>
                     <nav id="navbar" className="navbar">
-                        <ul className={isOpen ? 'open' : 'close'} >
+                        <ul className={isOpen ? 'open' : 'close'}  >
                             <li>
                                 <NavLink className="nav-link " to='/'>
                                     <span>
+                                        Home
                                     </span>
-                                    Home
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav-link " to='/plans' >
                                     <span>
+                                        Plans
                                     </span>
-                                    Plans
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav-link " to='/about' >
                                     <span>
+                                        About
                                     </span>
-                                    About
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav-link " to='/services' >
                                     <span>
+                                        Services
                                     </span>
-                                    Services
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav-link  " to='/policy'>
                                     <span>
+                                        Policies
                                     </span>
-                                    Policies
                                 </NavLink>
                             </li>
                             <li>
@@ -67,7 +64,12 @@ const Header = () => {
                                 </NavLink>
                             </li>
                         </ul>
-                            <i className="bi bi-list mobile-nav-toggle"></i>
+                        <div>
+                            <span className="hamburger-menu" onClick={() => setIsOpen(!isOpen)} >
+                                <GiHamburgerMenu hidden={isOpen} className='hamicon' />
+                                <GoX hidden={!isOpen} className='hamicon' />
+                            </span>
+                        </div>
                     </nav>
                 </div>
             </header>
